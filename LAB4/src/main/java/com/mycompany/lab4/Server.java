@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 
 public class Server {
     private static final String FILE_DOWNLOAD_DIR = "C:/Users/teo/Documents/github/advanced-network-programming/LAB4/Dowload file/";
-    private static final String UrlFileName = "downloaded.html";
+    private static final String URL_FILENAME = "downloaded.html";
     private static final String HTML_DOWNLOAD_DIR = "C:/Users/teo/Documents/github/advanced-network-programming/LAB4/Dowload HTML/";
     public static void main(String[] args) {
         try (ServerSocket serverSocket = new ServerSocket(8080);
@@ -34,7 +34,7 @@ public class Server {
                             URLConnection connection = url.openConnection();
                             connection.setRequestProperty("User-Agent", "Mozilla/5.0");
                             // Create file path for saving
-                            Path filePath = Paths.get(HTML_DOWNLOAD_DIR, UrlFileName);
+                            Path filePath = Paths.get(HTML_DOWNLOAD_DIR,URL_FILENAME);
 
                             BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                             BufferedWriter writer = new BufferedWriter(new FileWriter(filePath.toString()));

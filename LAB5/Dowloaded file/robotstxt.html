@@ -1,0 +1,423 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>The Web Robots Pages</title>
+<link id="css" rel="stylesheet" type="text/css" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="bodypart">
+      <div id="skipnav">
+	<a href="#content" accesskey="s">skip to content</a>
+      </div>
+      <div class="header">
+ <div class="inheaderlabel">Advertisement</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9311532361854131";
+//728x90, created 11/8/07
+google_ad_slot = "9811015679";
+google_ad_width = 728;
+google_ad_height = 90;
+//--></script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+      </div>
+      <div class="main">
+	<div class="navcol">
+	  <div class="navbox" id="logodiv">
+	    <a href="/" accesskey="h">
+	      <img
+	      src="/static/robotstxtwrap.png"
+	      alt="robotstxt.org logo" border="0"/>
+	    </a>
+	  </div>
+          <div class="navbox">
+	    <div class="navboxtitle">Navigation</div>
+            <div class="navboxitems">
+	      <ul>
+		<li><a href="/robotstxt.html">The /robots.txt</a></li>
+		<li><a href="/meta.html">&lt;META&gt; tags</a></li>
+		<li><a href="/faq.html">Frequently Asked Questions</a></li>
+		<li><a href="/mailinglist.html">Mailing list</a></li>
+		<li><a href="/other.html">Other Sites</a></li>
+		<li><a href="/about.html">About robotstxt.org</a></li>
+	      </ul>
+	    </div>
+	  </div>
+          <div class="navbox">
+	    <div class="navboxtitle">Tools</div>
+            <div class="navboxitems">
+	      <ul>
+		<li><a href="/checker.html">/robots.txt checker</a></li>
+		<li><a href="/db.html">Robots Database</a></li>
+		<li><a href="/iplookup.html">IP lookup</a></li>
+	      </ul>
+            </div>
+          </div>
+          <div class="navbox" id="leftcolad">
+	    <div class="navboxtitle">Advertisement</div>
+          </div>
+        </div>
+      <div class="rightcol">
+        <div class="navbox">
+ <script type="text/javascript"><!--
+google_ad_client = "pub-9311532361854131";
+//160x600, created 11/8/07
+google_ad_slot = "0512796426";
+google_ad_width = 160;
+google_ad_height = 600;
+//--></script>
+	<script type="text/javascript"
+	src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+
+        </div>
+      </div>
+      <div class="maincol">    
+	<div class="maincolwithfooter">
+	  <div id="content" class="content">
+<h2>About /robots.txt</h2>
+
+<h3>In a nutshell</h3>
+
+<p>
+
+Web site owners use the /robots.txt file to give instructions about
+their site to web robots; this is called <em>The Robots Exclusion
+Protocol</em>.
+
+</p>
+<p>
+
+It works likes this: a robot wants to vists a Web site URL, say
+http://www.example.com/welcome.html. Before it does so, it firsts
+checks for http://www.example.com/robots.txt, and finds:
+
+</p>
+<pre>User-agent: *
+Disallow: /
+</pre>
+
+<p>
+
+The "<tt>User-agent: *</tt>" means this section applies to all robots.
+
+The "<tt>Disallow: /</tt>" tells the robot that it should not visit any
+pages on the site.
+
+</p>
+
+<p>
+
+There are two important considerations when using /robots.txt:
+
+</p>
+
+<ul>
+
+<li>
+robots can ignore your /robots.txt. Especially malware robots that scan the
+web for security vulnerabilities, and email address harvesters used by spammers
+will pay no attention.
+</li>
+
+<li>
+the /robots.txt file is a publicly available file. Anyone can see what sections
+of your server you don't want robots to use.
+
+</li>
+
+</ul>
+
+<p>
+
+So don't try to use /robots.txt to hide information.
+
+</p>
+
+<p>
+See also:
+</p>
+<ul class="faqrefs" >
+<li>
+<a href="faq/blockjustbad.html">Can I block just bad robots?</a>
+</li>
+<li>
+<a href="faq/ignore.html">Why did this robot ignore my /robots.txt?</a>
+</li>
+<li>
+<a href="faq/nosecurity.html">What are the security implications of /robots.txt?</a>
+</li>
+</ul>
+
+<h3>The details</h3>
+
+<p>
+
+The /robots.txt is a de-facto standard, and is not owned by any
+standards body.
+
+There are two historical descriptions:
+
+</p>
+<ul>
+
+<li>
+
+the original 1994 <a href="orig.html">A Standard for Robot
+Exclusion</a> document.
+
+</li>
+
+<li>
+
+a 1997 Internet Draft specification <a href="norobots-rfc.txt">A Method for Web
+Robots Control</a>
+
+</li>
+
+</ul>
+
+<p>
+
+In addition there are external resources:
+
+</p>
+
+<ul>
+
+<li>
+
+<a
+href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.4.1.1">HTML
+4.01 specification, Appendix B.4.1</a>
+
+</li>
+
+<li>
+
+<a href="http://en.wikipedia.org/wiki/Robots.txt">Wikipedia - Robots Exclusion Standard</a>
+
+</li>
+
+</ul>
+
+<p>
+
+The /robots.txt standard is not actively developed.
+See <a href="faq/future.html">What about further development of /robots.txt?</a>
+for more discussion.
+
+</p>
+
+<p>
+
+The rest of this page gives an overview of how to use /robots.txt on
+your server, with some simple recipes.
+
+To learn more see also the <a href="faq.html">FAQ</a>.
+
+</p>
+
+<h3>How to create a /robots.txt file</h3>
+
+<h4>Where to put it</h4>
+
+<p>
+
+The short answer: in the top-level directory of your web server.
+
+</p>
+
+
+<p>
+
+The longer answer:
+
+</p>
+
+<p>
+
+When a robot looks for the "/robots.txt" file for URL, it strips the
+path component from the URL (everything from the first single slash),
+and puts "/robots.txt" in its place.
+
+</p>
+<p>
+
+For example, for "<tt>http://www.example.com/shop/index.html</tt>, it will
+remove the "<tt>/shop/index.html</tt>", and replace it with
+"<tt>/robots.txt</tt>", and will end up with
+"http://www.example.com/robots.txt".
+
+</p>
+<p>
+
+So, as a web site owner you need to put it in the right place on your
+web server for that resulting URL to work. Usually that is the same
+place where you put your web site's main "<tt>index.html</tt>" welcome
+page. Where exactly that is, and how to put the file there, depends on
+your web server software.
+
+</p>
+<p>
+
+Remember to use all lower case for the filename:
+"<tt>robots.txt</tt>", not "<tt>Robots.TXT</tt>.
+
+</p>
+
+<p>
+See also:
+</p>
+
+<ul class="faqrefs" >
+<li><a href="faq/editor.html">What program should I use to create /robots.txt?</a></li>
+<li><a href="faq/virtual.html">How do I use /robots.txt on a virtual host?</a></li>
+<li><a href="faq/shared.html">How do I use /robots.txt on a shared host?</a></li>
+</ul>
+
+<h4>What to put in it</h4>
+
+The "/robots.txt" file is a text file, with one or more records.
+Usually contains a single record looking like this:
+
+<pre>
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /~joe/
+</pre>
+
+<p>
+
+In this example, three directories are excluded.
+
+</p>
+<p>
+
+Note that you need a separate "Disallow" line for every URL prefix you
+want to exclude -- you cannot say "Disallow: /cgi-bin/ /tmp/" on a
+single line. Also, you may not have blank lines in a record, as they
+are used to delimit multiple records.
+
+</p>
+<p>
+
+Note also that globbing and regular expression are
+<strong>not</strong> supported in either the User-agent or Disallow
+lines. The '*' in the User-agent field is a special value meaning "any
+robot". Specifically, you cannot have lines like "User-agent: *bot*",
+"Disallow: /tmp/*" or "Disallow: *.gif".
+
+</p>
+<p>
+
+What you want to exclude depends on your server. 
+Everything not explicitly disallowed is considered fair
+game to retrieve. Here follow some examples:
+
+</p>
+
+<h5>To exclude all robots from the entire server</h5>
+
+<pre>
+User-agent: *
+Disallow: /
+
+</pre>
+
+<h5>To allow all robots complete access</h5>
+
+<pre>
+User-agent: *
+Disallow:
+</pre>
+
+<p>
+
+(or just create an empty "/robots.txt" file, or don't use one at all)
+
+</p>
+
+<h5>To exclude all robots from part of the server</h5>
+
+<pre>
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /junk/
+</pre>
+
+<h5>To exclude a single robot</h5>
+
+<pre>
+User-agent: BadBot
+Disallow: /
+</pre>
+
+<h5>To allow a single robot</h5>
+
+<pre>
+User-agent: Google
+Disallow:
+
+User-agent: *
+Disallow: /
+</pre>
+
+<h5>To exclude all files except one</h5>
+
+This is currently a bit awkward, as there is no "Allow" field.  The
+easy way is to put all files to be disallowed into a separate
+directory, say "stuff", and leave the one file in the level above
+this directory:
+
+<pre>
+User-agent: *
+Disallow: /~joe/stuff/
+</pre>
+
+Alternatively you can explicitly disallow all disallowed pages:
+
+<pre>
+User-agent: *
+Disallow: /~joe/junk.html
+Disallow: /~joe/foo.html
+Disallow: /~joe/bar.html
+</pre>
+
+
+	  </div>
+        </div>
+        <div class="outsidefooter">
+ 	  <div class="outsidefooterlabel">        
+	    Advertisement<br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9311532361854131";
+//468x60, created 11/8/07
+google_ad_slot = "8696051710";
+google_ad_width = 468;
+google_ad_height = 60;
+//--></script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+	  </div>
+
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="pagefooter">
+<a href="/about.html">About this site</a>
+|
+<a href="/privacy.html">Privacy and cookies policy</a>
+|
+<a href="/contact.html">Contact us</a>
+|
+<a href="/copyrights.html">&#169; 2007. All rights reserved.</a>
+    </div>
+  </body>
+</html>
+
